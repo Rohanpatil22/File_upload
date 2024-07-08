@@ -29,19 +29,22 @@ AWS.config.update({
 
   const s3 = new AWS.S3();
 
-// const storage=multer.diskStorage({
+// Code for file upload to loacal storage
+    // const storage=multer.diskStorage({
 
-//     destination: function(req,file,cb)
-//     {
-//         cb(null,"uploadedfiles/")
-//     },
-//     filename: function(req,file,cb)
-//     {
-//         const unitPrefix= Date.now();
-//         cb(null,unitPrefix+"_"+file.originalname);
-//     }
-// })
-// const upload = multer({ storage: storage })
+    //     destination: function(req,file,cb)
+    //     {
+    //         cb(null,"uploadedfiles/")
+    //     },
+    //     filename: function(req,file,cb)
+    //     {
+    //         const unitPrefix= Date.now();
+    //         cb(null,unitPrefix+"_"+file.originalname);
+    //     }
+    // })
+    // const upload = multer({ storage: storage })
+
+ // Code for file upload to local storage
 
 const upload = multer({ storage: multer.memoryStorage() })
 
